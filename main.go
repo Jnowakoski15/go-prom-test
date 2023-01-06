@@ -56,7 +56,7 @@ func main() {
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
-		fmt.Printf("Rand:%d", rand.Intn(100))
+		fmt.Printf("Rand:%d\n", rand.Intn(100))
 	})
 
 	fmt.Println("Hello world from new Go Collector!")
